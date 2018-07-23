@@ -73,8 +73,10 @@ public class MainFragment extends Fragment {
             //this.listener = (MainActivity) context;
         }
     }
+//آدرس لاگین سایتش
+//sadigi-chat.herokuapp.com
 
-
+    //اصلی ترین متدها on  و emit 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +89,7 @@ public class MainFragment extends Fragment {
         mSocket.on(Socket.EVENT_DISCONNECT,onDisconnect);
         mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
         mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
-        mSocket.on("new message", onNewMessage);
+        mSocket.on("new message", onNewMessage);//method hayi ke samte server support mishe
         mSocket.on("user joined", onUserJoined);
         mSocket.on("user left", onUserLeft);
         mSocket.on("typing", onTyping);
